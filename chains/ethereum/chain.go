@@ -116,10 +116,6 @@ func InitializeChain(chainCfg *core.ChainConfig, logger log15.Logger, sysErr cha
 	if err != nil {
 		return nil, err
 	}
-	err = conn.EnsureHasBytecode(cfg.erc20HandlerContract)
-	if err != nil {
-		return nil, err
-	}
 	err = conn.EnsureHasBytecode(cfg.genericHandlerContract)
 	if err != nil {
 		return nil, err
